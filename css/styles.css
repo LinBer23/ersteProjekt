@@ -1,0 +1,150 @@
+html,
+body {
+    margin: 0;
+    box-sizing: content-box;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+}
+
+button {
+    pointer-events: all;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+app-wrapper section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+app-wrapper section button {
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+app-popup {
+    display: none;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    position: fixed;
+    background-color: blanchedalmond;
+    padding: 30px;
+    margin: 0 20px 0;
+}
+
+app-popup header {
+    display: flex;
+    justify-content: end;
+}
+
+app-popup header button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+app-popup header button:hover {
+    background-color: rgb(246, 180, 136);
+    transform: rotate(0.3turn);
+}
+
+app-popup first-screen h3 {
+    font-size: calc(15px + 1.5vw);
+    text-shadow: 2px 2px 5px whitesmoke;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+app-popup first-screen p {
+    margin-top: -1px;
+    max-width: 600px;
+    font-size: calc(15px + 1vw);
+}
+
+app-popup first-screen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+app-popup footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+app-popup footer button {
+    padding: 5px 20px;
+}
+
+app-popup #left-button {
+    margin-right: 5px;
+    background-color: brown;
+    color: white;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Shake Effect */
+@keyframes shake-animation {
+    0% {
+        transform: translate(20px, 0);
+    }
+    1.78571% {
+        transform: translate(15px, 0);
+    }
+    2.57143% {
+        transform: translate(2px, 10px);
+    }
+    3.57143% {
+        transform: translate(0, 20px);
+    }
+    5.35714% {
+        transform: translate(5px, 1px);
+    }
+    7.14286% {
+        transform: translate(0, 10px);
+    }
+    8.92857% {
+        transform: translate(5px, 0);
+    }
+    10.71429% {
+        transform: translate(0, 5px);
+    }
+    15.23429% {
+        transform: translate(0, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
